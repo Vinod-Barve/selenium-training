@@ -14,20 +14,20 @@ import org.testng.annotations.Test;
 
 public class AnnotationsExample {
 	
-	@Test
-	public void testMethodOne() {
-		System.out.println("**********Inside testMethodOne**********");
-	}
-	
-	@Test
-	public void testMethodTwo() {
-		System.out.println("**********Inside testMethodTwo**********");
-	}
-	
-	@Test(groups= {"smoke"})
-	public void testMethodThree() {
-		System.out.println("**********Inside testMethodThree**********");	
-	}
+//	@Test
+//	public void testMethodOne() {
+//		System.out.println("**********Inside testMethodOne**********");
+//	}
+//	
+//	@Test
+//	public void testMethodTwo() {
+//		System.out.println("**********Inside testMethodTwo**********");
+//	}
+//	
+//	@Test(groups= {"smoke"})
+//	public void testMethodThree() {
+//		System.out.println("**********Inside testMethodThree**********");	
+//	}
 	
 	@BeforeSuite
 	public void beforeSuite() {

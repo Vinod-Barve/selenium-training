@@ -3,9 +3,15 @@
 <suite name="Suite">
   <test name="Test">
     <classes>
-      <class name="testng.TestAnnotationsExample"/>
-      <class name="testng.CalculatorTestNgTest"/>
-      <class name="testng.AnnotationsExample"/>
+    <!--   <class name="testng.TestAnnotationsExample"/>
+      <class name="testng.CalculatorTestNgTest"/> -->
+      <class name="testng.TestAttributesExample"/>
     </classes>
   </test> <!-- Test -->
+  
+  <test name="packageExample">
+  	<!-- <packages>
+  		<package name="testng" />
+  	</packages> -->
+  </test>
 </suite> <!-- Suite -->

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="packageExample(failed)">
+    <classes>
+      <class name="testng.TestAttributesExample">
+        <methods>
+          <include name="assertTimeOutTest"/>
+        </methods>
+      </class> <!-- testng.TestAttributesExample -->
+      <class name="testng.CalculatorTestNgTest">
+        <methods>
+          <include name="assertMultiplicationTest"/>
+          <include name="assertDivisionTest"/>
+        </methods>
+      </class> <!-- testng.CalculatorTestNgTest -->
+    </classes>
+  </test> <!-- packageExample(failed) -->
+</suite> <!-- Failed suite [Suite] -->

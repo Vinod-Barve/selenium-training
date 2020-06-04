@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="End to End Testing" parallel="methods" thread-count="5">
+
+  <parameter name="browserName"  value="Chrome"/>
+  <parameter name="browserVersion"  value="1.2.0"/>
+
+  <test name="Chrome Test">
+    <classes>
+      <class name="testng.TestAttributesExample"/>
+    </classes>
+  </test>
+  
+  <test name="Firefox Test">
+  <parameter name="browserName"  value="FireFox"/>
+  <parameter name="browserVersion"  value="1.2.3"/>
+  	<classes>
+      <class name="testng.TestAttributesExample"/>
+    </classes>
+  </test>
+  
+</suite>

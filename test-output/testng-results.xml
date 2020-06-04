@@ -1,52 +1,173 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="2" ignored="10" total="22" passed="10">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="178" started-at="2020-06-04T07:09:14Z" finished-at="2020-06-04T07:09:14Z">
+  <suite name="End to End Testing" duration-ms="4385" started-at="2020-06-04T19:31:34Z" finished-at="2020-06-04T19:31:39Z">
     <groups>
-      <group name="smoke">
-        <method signature="AnnotationsExample.testMethodThree()[pri:0, instance:testng.AnnotationsExample@5dfcfece]" name="testMethodThree" class="testng.AnnotationsExample"/>
-      </group> <!-- smoke -->
     </groups>
-    <test name="Default test" duration-ms="178" started-at="2020-06-04T07:09:14Z" finished-at="2020-06-04T07:09:14Z">
-      <class name="testng.AnnotationsExample">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:testng.AnnotationsExample@5dfcfece]" name="beforeSuite" is-config="true" duration-ms="36" started-at="2020-06-04T12:39:14Z" finished-at="2020-06-04T12:39:14Z">
+    <test name="Chrome Test" duration-ms="2120" started-at="2020-06-04T19:31:34Z" finished-at="2020-06-04T19:31:36Z">
+      <class name="testng.TestAttributesExample">
+        <test-method status="PASS" signature="assertParametersTest(java.lang.String, java.lang.String)[pri:0, instance:testng.TestAttributesExample@548b7f67]" name="assertParametersTest" duration-ms="42" started-at="2020-06-05T01:01:34Z" finished-at="2020-06-05T01:01:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1.2.0]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:testng.AnnotationsExample@5dfcfece]" name="beforeTest" is-config="true" duration-ms="3" started-at="2020-06-04T12:39:14Z" finished-at="2020-06-04T12:39:14Z">
+        </test-method> <!-- assertParametersTest -->
+        <test-method status="FAIL" signature="assertTimeOutTest()[pri:0, instance:testng.TestAttributesExample@548b7f67]" name="assertTimeOutTest" duration-ms="2044" started-at="2020-06-05T01:01:34Z" finished-at="2020-06-05T01:01:36Z">
+          <exception class="org.testng.internal.thread.ThreadTimeoutException">
+            <message>
+              <![CDATA[Method testng.TestAttributesExample.assertTimeOutTest() didn't finish within the time-out 2000]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.internal.thread.ThreadTimeoutException: Method testng.TestAttributesExample.assertTimeOutTest() didn't finish within the time-out 2000
+	at org.testng.internal.MethodInvocationHelper.invokeWithTimeoutWithNoExecutor(MethodInvocationHelper.java:264)
+	at org.testng.internal.MethodInvocationHelper.invokeWithTimeout(MethodInvocationHelper.java:246)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:675)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:877)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1201)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.internal.thread.ThreadTimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:testng.AnnotationsExample@5dfcfece]" name="beforeClass" is-config="true" duration-ms="1" started-at="2020-06-04T12:39:14Z" finished-at="2020-06-04T12:39:14Z">
+        </test-method> <!-- assertTimeOutTest -->
+        <test-method status="PASS" signature="assertStatementDownloadTest()[pri:0, instance:testng.TestAttributesExample@548b7f67]" name="assertStatementDownloadTest" duration-ms="39" started-at="2020-06-05T01:01:34Z" finished-at="2020-06-05T01:01:34Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="testMethodOne()[pri:0, instance:testng.AnnotationsExample@5dfcfece]" name="testMethodOne" duration-ms="43" started-at="2020-06-04T12:39:14Z" finished-at="2020-06-04T12:39:14Z">
+        </test-method> <!-- assertStatementDownloadTest -->
+        <test-method status="PASS" signature="assertValidExceptionTest()[pri:0, instance:testng.TestAttributesExample@548b7f67]" name="assertValidExceptionTest" duration-ms="36" started-at="2020-06-05T01:01:34Z" finished-at="2020-06-05T01:01:34Z">
+          <exception class="java.lang.ArithmeticException">
+            <message>
+              <![CDATA[/ by zero]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.ArithmeticException: / by zero
+	at testng.TestAttributesExample.assertValidExceptionTest(TestAttributesExample.java:25)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:669)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:877)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1201)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.ArithmeticException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMethodOne -->
-        <test-method status="PASS" signature="testMethodThree()[pri:0, instance:testng.AnnotationsExample@5dfcfece]" name="testMethodThree" duration-ms="18" started-at="2020-06-04T12:39:14Z" finished-at="2020-06-04T12:39:14Z">
+        </test-method> <!-- assertValidExceptionTest -->
+        <test-method status="PASS" signature="assertStatementDownloadTest()[pri:0, instance:testng.TestAttributesExample@548b7f67]" name="assertStatementDownloadTest" duration-ms="19" started-at="2020-06-05T01:01:34Z" finished-at="2020-06-05T01:01:34Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMethodThree -->
-        <test-method status="PASS" signature="testMethodTwo()[pri:0, instance:testng.AnnotationsExample@5dfcfece]" name="testMethodTwo" duration-ms="7" started-at="2020-06-04T12:39:14Z" finished-at="2020-06-04T12:39:14Z">
+        </test-method> <!-- assertStatementDownloadTest -->
+        <test-method status="PASS" signature="assertStatementDownloadTest()[pri:0, instance:testng.TestAttributesExample@548b7f67]" name="assertStatementDownloadTest" duration-ms="10" started-at="2020-06-05T01:01:34Z" finished-at="2020-06-05T01:01:34Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMethodTwo -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:testng.AnnotationsExample@5dfcfece]" name="afterClass" is-config="true" duration-ms="7" started-at="2020-06-04T12:39:14Z" finished-at="2020-06-04T12:39:14Z">
+        </test-method> <!-- assertStatementDownloadTest -->
+      </class> <!-- testng.TestAttributesExample -->
+    </test> <!-- Chrome Test -->
+    <test name="Firefox Test" duration-ms="2094" started-at="2020-06-04T19:31:37Z" finished-at="2020-06-04T19:31:39Z">
+      <class name="testng.TestAttributesExample">
+        <test-method status="PASS" signature="assertParametersTest(java.lang.String, java.lang.String)[pri:0, instance:testng.TestAttributesExample@7c16905e]" name="assertParametersTest" duration-ms="4" started-at="2020-06-05T01:01:37Z" finished-at="2020-06-05T01:01:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[FireFox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1.2.3]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:testng.AnnotationsExample@5dfcfece]" name="afterTest" is-config="true" duration-ms="1" started-at="2020-06-04T12:39:14Z" finished-at="2020-06-04T12:39:14Z">
+        </test-method> <!-- assertParametersTest -->
+        <test-method status="PASS" signature="assertValidExceptionTest()[pri:0, instance:testng.TestAttributesExample@7c16905e]" name="assertValidExceptionTest" duration-ms="43" started-at="2020-06-05T01:01:37Z" finished-at="2020-06-05T01:01:37Z">
+          <exception class="java.lang.ArithmeticException">
+            <message>
+              <![CDATA[/ by zero]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.ArithmeticException: / by zero
+	at testng.TestAttributesExample.assertValidExceptionTest(TestAttributesExample.java:25)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:669)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:877)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1201)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.ArithmeticException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterTest -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:testng.AnnotationsExample@5dfcfece]" name="afterSuite" is-config="true" duration-ms="1" started-at="2020-06-04T12:39:14Z" finished-at="2020-06-04T12:39:14Z">
+        </test-method> <!-- assertValidExceptionTest -->
+        <test-method status="FAIL" signature="assertTimeOutTest()[pri:0, instance:testng.TestAttributesExample@7c16905e]" name="assertTimeOutTest" duration-ms="2078" started-at="2020-06-05T01:01:37Z" finished-at="2020-06-05T01:01:39Z">
+          <exception class="org.testng.internal.thread.ThreadTimeoutException">
+            <message>
+              <![CDATA[Method testng.TestAttributesExample.assertTimeOutTest() didn't finish within the time-out 2000]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.internal.thread.ThreadTimeoutException: Method testng.TestAttributesExample.assertTimeOutTest() didn't finish within the time-out 2000
+	at org.testng.internal.MethodInvocationHelper.invokeWithTimeoutWithNoExecutor(MethodInvocationHelper.java:264)
+	at org.testng.internal.MethodInvocationHelper.invokeWithTimeout(MethodInvocationHelper.java:246)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:675)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:877)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1201)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.internal.thread.ThreadTimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterSuite -->
-      </class> <!-- testng.AnnotationsExample -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- assertTimeOutTest -->
+        <test-method status="PASS" signature="assertStatementDownloadTest()[pri:0, instance:testng.TestAttributesExample@7c16905e]" name="assertStatementDownloadTest" duration-ms="7" started-at="2020-06-05T01:01:37Z" finished-at="2020-06-05T01:01:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- assertStatementDownloadTest -->
+        <test-method status="PASS" signature="assertStatementDownloadTest()[pri:0, instance:testng.TestAttributesExample@7c16905e]" name="assertStatementDownloadTest" duration-ms="48" started-at="2020-06-05T01:01:37Z" finished-at="2020-06-05T01:01:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- assertStatementDownloadTest -->
+        <test-method status="PASS" signature="assertStatementDownloadTest()[pri:0, instance:testng.TestAttributesExample@7c16905e]" name="assertStatementDownloadTest" duration-ms="18" started-at="2020-06-05T01:01:37Z" finished-at="2020-06-05T01:01:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- assertStatementDownloadTest -->
+      </class> <!-- testng.TestAttributesExample -->
+    </test> <!-- Firefox Test -->
+  </suite> <!-- End to End Testing -->
 </testng-results>

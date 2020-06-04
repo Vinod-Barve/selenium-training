@@ -8,13 +8,43 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">178</td><td></td><td></td></tr>
+<tr><th colspan="7">End to End Testing</th></tr>
+<tr><td><a href="#t0">Chrome Test</a></td><td class="num">5</td><td class="num">0</td><td class="num attn">1</td><td class="num">2,120</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Firefox Test</a></td><td class="num">5</td><td class="num">0</td><td class="num attn">1</td><td class="num">2,094</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">10</th><th class="num">0</th><th class="num attn">2</th><th class="num">4,214</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">testng.AnnotationsExample</td><td><a href="#m0">testMethodOne</a></td><td rowspan="1">1591254554422</td><td rowspan="1">43</td></tr><tr class="passedeven"><td><a href="#m1">testMethodThree</a></td><td rowspan="1">1591254554483</td><td rowspan="1">18</td></tr><tr class="passedeven"><td><a href="#m2">testMethodTwo</a></td><td rowspan="1">1591254554518</td><td rowspan="1">7</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">End to End Testing</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Chrome Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testng.TestAttributesExample</td><td><a href="#m0">assertTimeOutTest</a></td><td rowspan="1">1591299094881</td><td rowspan="1">2044</td></tr><tr><th colspan="4">Chrome Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="5">testng.TestAttributesExample</td><td><a href="#m1">assertParametersTest</a></td><td rowspan="1">1591299094881</td><td rowspan="1">42</td></tr><tr class="passedeven"><td><a href="#m2">assertStatementDownloadTest</a></td><td rowspan="3">1591299094881</td><td rowspan="3">39</td></tr><tr class="passedeven"><td><a href="#m3">assertStatementDownloadTest</a></td></tr><tr class="passedeven"><td><a href="#m4">assertStatementDownloadTest</a></td></tr><tr class="passedeven"><td><a href="#m5">assertValidExceptionTest</a></td><td rowspan="1">1591299094881</td><td rowspan="1">36</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Firefox Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testng.TestAttributesExample</td><td><a href="#m6">assertTimeOutTest</a></td><td rowspan="1">1591299097116</td><td rowspan="1">2078</td></tr><tr><th colspan="4">Firefox Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="5">testng.TestAttributesExample</td><td><a href="#m7">assertParametersTest</a></td><td rowspan="1">1591299097116</td><td rowspan="1">4</td></tr><tr class="passedeven"><td><a href="#m8">assertStatementDownloadTest</a></td><td rowspan="3">1591299097120</td><td rowspan="3">7</td></tr><tr class="passedeven"><td><a href="#m9">assertStatementDownloadTest</a></td></tr><tr class="passedeven"><td><a href="#m10">assertStatementDownloadTest</a></td></tr><tr class="passedeven"><td><a href="#m11">assertValidExceptionTest</a></td><td rowspan="1">1591299097116</td><td rowspan="1">43</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">testng.AnnotationsExample#testMethodOne</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">testng.AnnotationsExample#testMethodThree</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">testng.AnnotationsExample#testMethodTwo</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Chrome Test</h2><h3 id="m0">testng.TestAttributesExample#assertTimeOutTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.internal.thread.ThreadTimeoutException: Method testng.TestAttributesExample.assertTimeOutTest() didn&apos;t finish within the time-out 2000
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 7 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">testng.TestAttributesExample#assertParametersTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>Chrome</td><td>1.2.0</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">testng.TestAttributesExample#assertStatementDownloadTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">testng.TestAttributesExample#assertStatementDownloadTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">testng.TestAttributesExample#assertStatementDownloadTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">testng.TestAttributesExample#assertValidExceptionTest</h3><table class="result"><tr><th>Expected Exception</th></tr><tr><td><div class="stacktrace">java.lang.ArithmeticException: / by zero
+	at testng.TestAttributesExample.assertValidExceptionTest(TestAttributesExample.java:25)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 10 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Firefox Test</h2><h3 id="m6">testng.TestAttributesExample#assertTimeOutTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.internal.thread.ThreadTimeoutException: Method testng.TestAttributesExample.assertTimeOutTest() didn&apos;t finish within the time-out 2000
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 7 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">testng.TestAttributesExample#assertParametersTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>FireFox</td><td>1.2.3</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">testng.TestAttributesExample#assertStatementDownloadTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">testng.TestAttributesExample#assertStatementDownloadTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">testng.TestAttributesExample#assertStatementDownloadTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">testng.TestAttributesExample#assertValidExceptionTest</h3><table class="result"><tr><th>Expected Exception</th></tr><tr><td><div class="stacktrace">java.lang.ArithmeticException: / by zero
+	at testng.TestAttributesExample.assertValidExceptionTest(TestAttributesExample.java:25)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 10 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
