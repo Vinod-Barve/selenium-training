@@ -1,26 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [End to End Testing]" parallel="methods">
-  <parameter name="browserVersion" value="1.2.0"/>
-  <parameter name="browserName" value="Chrome"/>
-  <test name="Chrome Test(failed)" parallel="methods">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="testng.TestAttributesExample">
+      <class name="testng.ParametersAndDataProviderExample">
         <methods>
-          <include name="assertTimeOutTest"/>
+          <include name="assertExternalDataProviderTest"/>
         </methods>
-      </class> <!-- testng.TestAttributesExample -->
+      </class> <!-- testng.ParametersAndDataProviderExample -->
     </classes>
-  </test> <!-- Chrome Test(failed) -->
-  <test name="Firefox Test(failed)" parallel="methods">
-    <parameter name="browserVersion" value="1.2.3"/>
-    <parameter name="browserName" value="FireFox"/>
-    <classes>
-      <class name="testng.TestAttributesExample">
-        <methods>
-          <include name="assertTimeOutTest"/>
-        </methods>
-      </class> <!-- testng.TestAttributesExample -->
-    </classes>
-  </test> <!-- Firefox Test(failed) -->
-</suite> <!-- Failed suite [End to End Testing] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

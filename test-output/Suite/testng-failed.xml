@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test name="packageExample(failed)">
+  <test name="Groups Example(failed)">
+    <groups>
+      <run>
+        <include name="smoke"/>
+        <include name="regression"/>
+        <exclude name="funcTest"/>
+      </run>
+    </groups>
     <classes>
       <class name="testng.TestAttributesExample">
         <methods>
-          <include name="assertTimeOutTest"/>
+          <include name="assertLoginTest"/>
+          <include name="assertOtherAccountTransferMoneyTest"/>
         </methods>
       </class> <!-- testng.TestAttributesExample -->
-      <class name="testng.CalculatorTestNgTest">
-        <methods>
-          <include name="assertMultiplicationTest"/>
-          <include name="assertDivisionTest"/>
-        </methods>
-      </class> <!-- testng.CalculatorTestNgTest -->
     </classes>
-  </test> <!-- packageExample(failed) -->
+  </test> <!-- Groups Example(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-  <test name="Test">
+<suite name="TestNG XML Example">
+
+  <test name="smoke">
     <classes>
-    <!--   <class name="testng.TestAnnotationsExample"/>
-      <class name="testng.CalculatorTestNgTest"/> -->
       <class name="testng.TestAttributesExample"/>
     </classes>
-  </test> <!-- Test -->
-  
-  <test name="packageExample">
-  	<!-- <packages>
-  		<package name="testng" />
-  	</packages> -->
   </test>
-</suite> <!-- Suite -->
+  
+  <test name="regression">
+    <classes>
+      <class name="testng.TestAttributesExample"/>
+    </classes>
+  </test>
+
+</suite>

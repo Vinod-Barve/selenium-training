@@ -2,22 +2,22 @@ package java_program;
 
 public class CalculatorTest extends Calculator{
 
-//	public CalculatorTest() {
-//		
-//		assertAdditionTest();
-//		assertSubstractionTest();		
-//		assertDivisionTest();
-//		assertMultiplicationTest();
-//		
-//		// Dependency 
-////		if(assertAdditionTest() && assertSubstractionTest()) {
-////			
-////			assertDivisionTest();
-////			assertMultiplicationTest();
-////			
-////		}
-//		
-//	}
+	public CalculatorTest() {
+		
+		assertAdditionTest();
+		assertSubstractionTest();		
+		assertDivisionTest();
+		assertMultiplicationTest();
+		
+		// Dependency 
+		if(assertAdditionTest() && assertSubstractionTest()) {
+			
+			assertDivisionTest();
+			assertMultiplicationTest();
+			
+		}
+		
+	}
 	
 	
 	public boolean assertAdditionTest() {

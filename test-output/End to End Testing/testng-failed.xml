@@ -7,18 +7,16 @@
     <classes>
       <class name="testng.TestAttributesExample">
         <methods>
-          <include name="assertTimeOutTest"/>
+          <include name="assertParametersTest"/>
         </methods>
       </class> <!-- testng.TestAttributesExample -->
     </classes>
   </test> <!-- Chrome Test(failed) -->
   <test name="Firefox Test(failed)" parallel="methods">
-    <parameter name="browserVersion" value="1.2.3"/>
-    <parameter name="browserName" value="FireFox"/>
     <classes>
       <class name="testng.TestAttributesExample">
         <methods>
-          <include name="assertTimeOutTest"/>
+          <include name="assertParametersTest"/>
         </methods>
       </class> <!-- testng.TestAttributesExample -->
     </classes>

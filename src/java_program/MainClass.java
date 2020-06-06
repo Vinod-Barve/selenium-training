@@ -6,10 +6,10 @@ public class MainClass {
 		// TODO Auto-generated method stub
 		CalculatorTest calculatorTest = new CalculatorTest();
 		
-//		calculatorTest.assertSubstractionTest();
+		calculatorTest.assertSubstractionTest();
 		calculatorTest.assertAdditionTest();
-//		calculatorTest.assertDivisionTest();
-//		calculatorTest.assertMultiplicationTest();
+		calculatorTest.assertDivisionTest();
+		calculatorTest.assertMultiplicationTest();
 
 	}
 
