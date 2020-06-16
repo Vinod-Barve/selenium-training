@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="31543" started-at="2020-06-16T08:03:11Z" finished-at="2020-06-16T08:03:42Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="31543" started-at="2020-06-16T08:03:11Z" finished-at="2020-06-16T08:03:42Z">
+      <class name="amazon_book_search.AmazonTest">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:amazon_book_search.AmazonTest@2f7a2457]" name="openBrowser" is-config="true" duration-ms="12119" started-at="2020-06-16T08:03:11Z" finished-at="2020-06-16T08:03:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="assertBookSearchTest()[pri:0, instance:amazon_book_search.AmazonTest@2f7a2457]" name="assertBookSearchTest" duration-ms="17721" started-at="2020-06-16T08:03:23Z" finished-at="2020-06-16T08:03:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- assertBookSearchTest -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:amazon_book_search.AmazonTest@2f7a2457]" name="closeBrowser" is-config="true" duration-ms="1581" started-at="2020-06-16T08:03:41Z" finished-at="2020-06-16T08:03:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- amazon_book_search.AmazonTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

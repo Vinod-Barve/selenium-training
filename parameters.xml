@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="TestNG Parameters Example" parallel="tests" thread-count="2">
+<suite name="TestNG Parameters Example" parallel="methods" thread-count="10" data-provider-thread-count="10">
 
   <parameter name="browserName"  value="Chrome"/>
   <parameter name="browserVersion"  value="1.2.0"/>
@@ -11,13 +11,13 @@
     </classes>
   </test>
   
-  <test name="Firefox Test">
+<!--   <test name="Firefox Test">
   <parameter name="browserName"  value="FireFox"/>
   <parameter name="browserVersion"  value="1.2.3"/>
   
   	<classes>
       <class name="testng.ParametersAndDataProviderExample"/>
     </classes>
-  </test>
+  </test> -->
   
 </suite>

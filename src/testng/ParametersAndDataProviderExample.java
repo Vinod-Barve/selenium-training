@@ -3,13 +3,14 @@ package testng;
 import java.util.Calendar;
 import java.util.HashMap;
 
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class ParametersAndDataProviderExample {
-
-	@Test
+	
+	@Test(enabled=false)
 	@Parameters({ "browserName", "browserVersion" })
 	public void assertParametersTest(String browserName, String browserVersion) {
 		System.out.println("Browser Name is: " + browserName + " Browser version is: " + browserVersion);
@@ -24,7 +25,7 @@ public class ParametersAndDataProviderExample {
 	
 	// DataProvider Example One 
 	
-	@Test(dataProvider="dataProviderWithoutCustomName")
+	@Test(dataProvider="dataProviderWithoutCustomName", enabled=false)
 	public void assertDataProviderWithoutustomNameTest(String userName, String password) {
 		System.out.println("Username is : "+userName+" Password is: "+password);
 	}
@@ -42,7 +43,7 @@ public class ParametersAndDataProviderExample {
 	
 	// DataProvider Example Two 
 
-	@Test(dataProvider="customDataProvider")
+	@Test(dataProvider="customDataProvider", enabled=false)
 	public void assertDataProviderWithCustomNameTest(int userId, String userName) {
 		System.out.println("User Id is: "+userId+" Username is : "+userName);
 	}
@@ -61,9 +62,13 @@ public class ParametersAndDataProviderExample {
 	
 	// DataProvider Example Three
 
-		@Test(dataProvider="externalDataProvider", dataProviderClass=ExternalDataProviderClass.class)
-		public void assertExternalDataProviderTest(String userName) {
-			System.out.println("Today's message is: "+userName);
+		@Test(dataProvider= "externalDataProvider", dataProviderClass=ExternalDataProviderClass.class)
+		public void assertExternalDataProviderTest(String message) {
+			String expectedTodaysDay = "Monday";
+			Assert.assertTrue(message.contains(expectedTodaysDay), "Today's days message is not correct");
+			
+			System.out.println("Today's message is: "+message);
+			
 			try {
 				Thread.sleep(2000);
 			} catch (InterruptedException e) {
@@ -71,23 +76,4 @@ public class ParametersAndDataProviderExample {
 				e.printStackTrace();
 			}
 		}
-}
-
-
-class ExternalDataProviderClass{
-	
-	@DataProvider(name="externalDataProvider", parallel=true)
-	public static Object[] externalDataProvider() {
-		Object[] weekDays = new Object[7];
-		
-		weekDays[0] = "Happy Monday !!!";
-		weekDays[1] = "Happy Tuesday !!!";
-		weekDays[2] = "Happy Wednesday !!!";
-		weekDays[3] = "Happy Thursday !!!";
-		weekDays[4] = "Happy Friday !!!";
-		weekDays[5] = "Happy Saturday !!!";
-		weekDays[6] = "Happy Sunday !!!";
-
-		return weekDays;	
-	}
 }
